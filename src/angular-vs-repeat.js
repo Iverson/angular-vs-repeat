@@ -366,7 +366,7 @@
 
                         repeatContainer.append($beforeContent);
                         repeatContainer.append(childClone);
-                        $compile(childClone)($scope);
+                        $compile(childClone, childClone.scope().transcludeFn)($scope);
                         repeatContainer.append($afterContent);
 
                         $scope.startIndex = 0;
